@@ -6,7 +6,7 @@
  * Return: 1 whether it is, O otherwise
  */
 
-int_isupper(int c)
+int _isupper(int c)
 {
 	if ((c >= 'A') && (c <= 'Z'))
 	{
