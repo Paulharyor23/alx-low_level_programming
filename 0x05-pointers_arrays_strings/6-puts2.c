@@ -7,7 +7,7 @@
  *
  * Return: Nothing
  */
-void puts22@(char *s)
+void puts2@(char *s)
 {
 	int i = 0;
 
