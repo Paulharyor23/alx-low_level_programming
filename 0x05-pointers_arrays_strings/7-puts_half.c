@@ -1,18 +1,25 @@
-#include "main.h"
-
-/**
- * char *_strcpy - a function that copies the string pointed to by src
- * @dest: copy to
- * @src: copy from
- * Return: string
- */
-char *_strcpy(char *dest, char *src)
-{
-	int i = 0;
-
-	for (; src[i] != '\0'; i++)
-	{
-		dest[i] = src[i];
-	}
-	return (dest);
+#include "main.h"                                                                                                                                      
+#include <stdio.h>                                                                                                                                     
+                                                                                                                                                       
+/**                                                                                                                                                    
+ * puts_half - a function that prints half of a string                                                                                                 
+ * if odd len, n = (length_of_the_string - 1) / 2                                                                                                      
+ * @str: input                                                                                                                                         
+ * Return: half of input                                                                                                                               
+ */                                                                                                                                                    
+void puts_half(char *str)                                                                                                                              
+{                                                                                                                                                      
+        int i, n, len = 0;                                                                                                                             
+                                                                                                                                                       
+        for (i = 0; str[i] != '\0'; i++)                                                                                                               
+                len++;                                                                                                                                 
+                                                                                                                                                       
+        n = (len / 2);                                                                                                                                 
+                                                                                                                                                       
+        if ((len % 2) == 1)                                                                                                                            
+                n = ((len - 1) / 2);                                                                                                                   
+                                                                                                                                                       
+        for (i = n; str[i] != '\0'; i++)                                                                                                               
+                _putchar(str[i]);                                                                                                                      
+        _putchar('\n');                                                                                                                                
 }
