@@ -6,7 +6,7 @@
  * @b: second integer
  * Return : nothing
  */
-void swap integer(int *a, int *b)
+void swap_int(int *a, int *b)
 {
 	int tmp = *a;
 	*a = *b;
