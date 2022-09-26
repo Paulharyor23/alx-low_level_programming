@@ -1,64 +1,28 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * _strstr - locates a substring
- * @haystack: string in which to check for needle
- * @needle: substring to find in haystack
+ * *_strstr - locates a substring
+ * @haystack: string to search in
+ * @needle: substring to look for
  *
-<<<<<<< HEAD
- * Return: pointer to beginning of needle in haystack or NULL if no match
-=======
- * Return: true if haystack and needle are the same.
- */
-
-int compare(char *haystack, char *needle)
-{
-	/* loop through both strings */
-	while (*haystack && *needle)
-	{
-		/* compare both strings */
-		if (*haystack != *needle)
-			return (0);
-
-		haystack++;
-		needle++;
-	}
-
-	return (*needle == '\0');
-}
-
-
-
-/**
- *_strstr - function that locates a substring.
- * @haystack: pointer to the null-terminated byte string to examine.
- * @needle: pointer to the null-terminated byte string to search for.
+ * Return: pointer to the beginning of the located substring
  *
- * Return:  a pointer to the beginning of the located substring,
- * or NULL if the substring is not found.
->>>>>>> 9ab1a27d3d93ae260a0944c95df06c4b1b30fc80
+ * or NULL if the substring is not found
  */
-
-char *_strstr(char *haystack, char *needle)
+char *_strstr(char *haystack, char *needle)	
 {
-	unsigned int i = 0, j = 0;
+	int i, j;
 
-	while (haystack[i])
+	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		while (needle[j] && (haystack[i] == needle[0]))
+		for (j = 0; needle[j] != '\0'; j++)
 		{
-			if (haystack[i + j] == needle[j])
-				j++;
-			else
+			if (haystack[i + j] != needle[j])
 				break;
 		}
-		if (needle[j])
-		{
-			i++;
-			j = 0;
-		}
-		else
-			return (haystack + i);
+		if (!needle[j])
+			return (&haystack[i]);
 	}
-	return (0);
+	return (NULL);
 }
