@@ -8,6 +8,7 @@
  *
  * Return: true if haystack and needle are the same.
  */
+
 int compare(char *haystack, char *needle)
 {
 	/* loop through both strings */
@@ -20,8 +21,10 @@ int compare(char *haystack, char *needle)
 		haystack++;
 		needle++;
 	}
+
 	return (*needle == '\0');
 }
+
 
 
 /**
@@ -32,6 +35,7 @@ int compare(char *haystack, char *needle)
  * Return:  a pointer to the beginning of the located substring,
  * or NULL if the substring is not found.
  */
+
 char *_strstr(char *haystack, char *needle)
 {
 	while (*haystack != '\0')
