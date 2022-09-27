@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
 *print_chessboard - that prints the chessboard
 *@a: the rows
@@ -27,5 +28,4 @@ _putchar(a[i][j]);
 }
 _putchar('\n');
 }
->>>>>>> d8d412eeb7dca023001417082c1478a5b9695476
 }
