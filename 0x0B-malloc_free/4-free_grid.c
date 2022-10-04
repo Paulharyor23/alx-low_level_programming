@@ -1,38 +1,22 @@
-#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include "main.h"
 
 /**
- * **alloc_grid - returns pointer to a 2D array of integers
- * @width: first element
- * @height: second element
+ * free_grid - function that frees a 2-D grid previously created by,
+ * my alloc_grid function.
+ * @grid: 2-D array of integers.
+ * @height: height of the 2D array or frid.
  *
- * Return: NULL on fail,W || H = - NULL
+ * Compilation will be done with the alloc_grid.c file.
+ * Return: No return.
  */
-int **alloc_grid(int width, int height)
+void free_grid(int **grid, int height)
 {
-	int **array;
-
-	int i, j;
-
-	array = malloc(sizeof(*array) * height);
-
-	if (width <= 0 || height <= 0 || array == 0)
-		return (NULL);
+	if (grid != NULL && height != 0)
 	{
-		for (i = 0; i < height; i++)
-		{
-			array[i] = malloc(sizeof(**array) * width);
-			if (array[i] == 0)
-			{
-				while (i--)
-					free(array[i]);
-				free(array);
-				return (NULL);
-			}
-			for (j = 0; j < width; j++)
-				array[i][j] = 0;
-		}
+		for (; height >= 0; height--)
+			free(grid[height]);
+		free(grid);
 	}
-	return (array);
 }
