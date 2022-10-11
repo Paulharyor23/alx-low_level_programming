@@ -3,7 +3,6 @@
 
 /**
  * print_dog - Prints the data elements of struct dog
- *
  * @d: Pointer to struct dog
  */
 
