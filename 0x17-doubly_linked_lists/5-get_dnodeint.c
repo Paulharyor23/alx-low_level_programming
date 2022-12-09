@@ -25,7 +25,3 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	}
 	return (NULL);
 }
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
-
